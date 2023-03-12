@@ -95,7 +95,6 @@ namespace homework2
                 Console.WriteLine("Not an integer, please try again.");
             }
             Console.ResetColor();
-
             Console.Write("Press enter to continue");
             Console.ReadLine();
 
