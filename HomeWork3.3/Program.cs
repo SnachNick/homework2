@@ -13,7 +13,7 @@ namespace HomeWork3._3
             //- Write a C# program to print the odd numbers from 1 to 99. Prints one number per line.
             for (int i = 1; i < 100; i++)
             {
-                Console.WriteLine(i);
+                if (i % 2 != 0) Console.WriteLine(i);
             }
             Console.Write("Press enter to continue");
             Console.ReadLine();
