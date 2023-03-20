@@ -5,15 +5,17 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework2", "homework2\homework2.csproj", "{61FA7DC3-EA62-49C3-A01C-8FB19E9D7ADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework3", "Homework3\Homework3.csproj", "{77E9FF6E-2A75-4BB2-8E87-36D29AA883A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework3", "Homework3\Homework3.csproj", "{77E9FF6E-2A75-4BB2-8E87-36D29AA883A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork3.2", "HomeWork3.2\HomeWork3.2.csproj", "{36FF1D29-AA96-4D4B-92D7-E864775100D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork3.2", "HomeWork3.2\HomeWork3.2.csproj", "{36FF1D29-AA96-4D4B-92D7-E864775100D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork3.3", "HomeWork3.3\HomeWork3.3.csproj", "{A5FADA6D-6BC2-4D01-809C-757AB95EB8A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork3.3", "HomeWork3.3\HomeWork3.3.csproj", "{A5FADA6D-6BC2-4D01-809C-757AB95EB8A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork3.4", "HomeWork3.4\HomeWork3.4.csproj", "{EE0D7315-D203-4242-BB2E-70085702EEC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork3.4", "HomeWork3.4\HomeWork3.4.csproj", "{EE0D7315-D203-4242-BB2E-70085702EEC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework3_1_2_add", "homework_4_1_2\homework3_1_2_add.csproj", "{96820C51-C79F-49B6-AD82-7976D55F8EEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework3_1_2_add", "homework_4_1_2\homework3_1_2_add.csproj", "{96820C51-C79F-49B6-AD82-7976D55F8EEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework_4_1", "homework_4_1\homework_4_1.csproj", "{C6D856B5-B69D-411F-B20A-E959A15B6CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{96820C51-C79F-49B6-AD82-7976D55F8EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96820C51-C79F-49B6-AD82-7976D55F8EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96820C51-C79F-49B6-AD82-7976D55F8EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D856B5-B69D-411F-B20A-E959A15B6CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D856B5-B69D-411F-B20A-E959A15B6CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D856B5-B69D-411F-B20A-E959A15B6CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D856B5-B69D-411F-B20A-E959A15B6CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
