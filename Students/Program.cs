@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Students
@@ -9,9 +8,15 @@ namespace Students
     {
         static void Main(string[] args)
         {
-            var students = new Students("Alex", "Pereverzev", "Brovary", new DateTime(1984, 07, 24), "C# part 1");
+            var students = new Students("Alex", "Pereverzev", "Brovary", new DateTime(1984, 07, 24));
+            var cources1 = new Cources("C#", "Kristina", "Hurieieva", new DateTime(2023, 03, 08), 4, 10);
+            var cources2 = new Cources("C#", "test", "test", new DateTime(2023, 03, 08), 4, 10);
+
             students.Print();
-                        
+            cources1.Print();
+            students.AddCource(cources1);
+            students.AddCource(cources1);
+            students.Print();
         }
     }
     class Students
@@ -21,58 +26,56 @@ namespace Students
         public DateTime Birthday { get; set; }
 
         public string City { get; set; }
-        public string Cource { get; set; }
-        public string []Cources { get; private  set; }
-        public Students(string firstName, string lastName, string city, DateTime birthday, string cource)
+        private Cources[] _cources = Array.Empty<Cources>();
+        public Cources[] Cources
+        {
+            get { return this._cources; }
+            set { this._cources = value; }
+        }
+
+        public Students(string firstName, string lastName, string city, DateTime birthday)
         {
             FirstName = firstName;
             LastName = lastName;
             City = city;
             Birthday = birthday;
-            Cource = cource;
-            string[] cources1;
-            Cources = new string[]Append(Cource);
+
         }
-        public void AddCource(string cource)
+        public Students(string firstName, string lastName, string city, DateTime birthday, Cources[] cources)
         {
-            Cources = Cources.Append(cource).ToArray();
+            _cources = cources;
+            Cources = cources;
         }
-        public void RemoveCource(string cource)
+
+        public void AddCource(Cources cource)
         {
-            Cources = Cources.Except(new string[] { cource }).ToArray();
+            Cources[] t = Cources;
+
+            if (Cources.Length == 0)
+            {
+                Cources = new Cources[1] { cource };
+            }
+            else
+            {
+                Array.Resize(ref t, Cources.Length + 1);
+                t[Cources.Length] = cource;
+                Cources = t;
+            }
+
         }
 
         public void Print()
         {
-            Console.WriteLine($"First name is {FirstName}, Last Name is {LastName}, from City {City}, {(DateTime.Now.Year - Birthday.Year)} , cources {string.Join(string.Empty, Cources)}");
+            Console.WriteLine($"First name is {FirstName}, Last Name is {LastName}, from City {City}, {(DateTime.Now.Year - Birthday.Year)} years old");
+            foreach (var item in Cources)
+            {
+                item.Print();
+            }
         }
 
     }
 
-    class Course 
-    {
-        public string CoursetName { get; set; }
-        public string TeacherFirstName { get; set; }
-        public string TeacherLastName { get; set; }
-        public DateTime CourceStarDate { get; set; }
-        public int CourceDuration { get; set; }
-        public int CourceStudentsCount { get; set; }
-        public Course(string courseName, string firstName, string lastName, DateTime courceStarDate, int courceDuration, int courceStudentsCount)
-        {
-            CoursetName = courseName;
-            TeacherFirstName = firstName;
-            TeacherLastName = lastName;
-            CourceStarDate = courceStarDate;
-            CourceDuration = courceDuration;
-            CourceStudentsCount = courceStudentsCount;
-
-        }
-        public void Print()
-        {
-            Console.WriteLine($"Course name is {CoursetName}, a teacher name is {TeacherFirstName}{TeacherLastName}. The course is starting at {CourceStarDate} and ending {CourceStarDate.AddDays(CourceDuration)}, number of students is {CourceStudentsCount} ");
-        }
-
-    }
+    
 
 }
 
