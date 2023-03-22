@@ -9,13 +9,18 @@ namespace Students
         static void Main(string[] args)
         {
             var students = new Students("Alex", "Pereverzev", "Brovary", new DateTime(1984, 07, 24));
+            var students1 = new Students("test", "test", "Brovary", new DateTime(1984, 07, 24));
+
             var cources1 = new Cources("C#", "Kristina", "Hurieieva", new DateTime(2023, 03, 08), 4, 10);
             var cources2 = new Cources("C#", "test", "test", new DateTime(2023, 03, 08), 4, 10);
 
             students.Print();
             cources1.Print();
             students.AddCource(cources1);
-            students.AddCource(cources1);
+            students1.AddCource(cources1);
+            students.AddCource(cources2);
+            students.Print();
+            students.RemoveCource(cources1);
             students.Print();
         }
     }
@@ -54,15 +59,27 @@ namespace Students
             if (Cources.Length == 0)
             {
                 Cources = new Cources[1] { cource };
+                cource.AddStudent();
             }
             else
             {
                 Array.Resize(ref t, Cources.Length + 1);
                 t[Cources.Length] = cource;
                 Cources = t;
+                cource.AddStudent();
+
             }
 
+
         }
+
+        public void RemoveCource(Cources cource)
+        {
+            int index = Array.IndexOf(Cources, cource);
+            Cources = Cources.Where((e, i) => i != index).ToArray();
+            cource.DecStudent();
+        }
+
 
         public void Print()
         {
