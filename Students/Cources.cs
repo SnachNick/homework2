@@ -30,7 +30,7 @@
         public void DecStudent()
         {
             if (CourceInvitedStudents>0)
-            CourceInvitedStudents = CourceInvitedStudents -1;
+            CourceInvitedStudents --;
         }
 
     }
