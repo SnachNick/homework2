@@ -10,7 +10,7 @@ namespace Students
             get { return this._student; }
             set { this._student = value; }
         }
-        private Collection<Cources> _cources = new Collection<Cources>();
+        public Collection<Cources> _cources = new Collection<Cources>();
         public Collection<Cources> Cources
         {
             get { return this._cources; }

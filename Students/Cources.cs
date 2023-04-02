@@ -10,7 +10,7 @@ namespace Students
         public int CourceStudentsCount { get; set; }
         public int CourceInvitedStudents { get; private set; }
 
-        private Collection<Students> _student = new Collection<Students>();
+        public Collection<Students> _student = new Collection<Students>();
         public Collection<Students> Students
         {
             get { return this._student; }
@@ -28,6 +28,7 @@ namespace Students
         {
             Console.WriteLine($"Course name is {CoursetName}. The course is starting at {CourceStarDate.ToString("MM/dd/yyyy")} and ending {CourceStarDate.AddDays(CourceDuration).ToString("MM/dd/yyyy")}, max number of students is {CourceStudentsCount}, invited number of students is {CourceInvitedStudents}");
         }
+
         public void AddStudent(Students student)
             {
             Students.Add(student);

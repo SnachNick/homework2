@@ -6,7 +6,7 @@ namespace Students
     {
         //private Cources[] _cources = Array.Empty<Cources>();
 
-        private Collection<Cources> _cources = new Collection<Cources>();
+        public Collection<Cources> _cources = new Collection<Cources>();
         public Collection<Cources> Cources
         {
             get { return this._cources; }
@@ -41,6 +41,7 @@ namespace Students
             }
             return 0;
         }
+
 
         public void Print()
         {
