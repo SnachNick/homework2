@@ -30,18 +30,28 @@ namespace Students
         }
 
         public void AddStudent(Students student)
+        {
+            try
             {
-            Students.Add(student);
-            CourceInvitedStudents++;
+                Students.Add(student);
+                CourceInvitedStudents++;
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }            
+        }
         public void DecStudent(Students student)
         {
-            if (CourceInvitedStudents > 0)
+            try
             {
-            Students.Remove(student);
-            CourceInvitedStudents--;
+                Students.Remove(student);
+                CourceInvitedStudents--;
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
     }

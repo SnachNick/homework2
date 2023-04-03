@@ -35,24 +35,48 @@ namespace Students
         }
         public void AddCource(Cources cource)
         {
-            Cources.Add(cource);
+            try
+            {
+                Cources.Add(cource);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void RemoveCource(Cources cource)
         {
-            Cources.Remove(cource);
+            try
+            {
+                Cources.Remove(cource);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         public void AddStudent(Students student)
         {
-            Students.Add(student);
+            try
+            {
+                Students.Add(student);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);  
+            }
         }
         public void DecStudent(Students student)
         {
-            if (Students.Count > 0) 
+            try
             {
                 Students.Remove(student);
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

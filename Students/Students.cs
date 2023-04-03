@@ -24,12 +24,26 @@ namespace Students
 
         public void AddCource(Cources cource)
         {
-            Cources.Add(cource);
+            try
+            {
+                Cources.Add(cource);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void RemoveCource(Cources cource)
         {
-            Cources.Remove(cource); 
+            try 
+            { 
+                Cources.Remove(cource);
+            } 
+            catch (Exception ex) 
+            { 
+                Console.WriteLine(ex.Message);
+            }
         }
         public override int GetInfo()
         {

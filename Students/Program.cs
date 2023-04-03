@@ -93,32 +93,29 @@ namespace Students
                     Console.WriteLine("--------------------------------------------");
                 }
             }
-
-            /*
-
-            foreach (var c  in cources)
+            Console.WriteLine("Please enter the name for searching through all objects:");
+            var search = Console.ReadLine();
+            var tcc = from t in teachers where t.FirstName.Contains(search) select t.LastName + " " + t.FirstName;
+            foreach (var t in tcc)
             {
-                var stInq = from st in students where st.Cources.Contains() select student;
-                foreach (var s in stInq)
-                    Console.WriteLine($"Student {s.FirstName} , {s.LastName} of the course {c.CoursetName}");
+                Console.WriteLine($"Teacher name is {t}.");
+                
             }
-            */
+            Console.WriteLine("--------------------------------------------");
+            var tt = from t in cources where t.CoursetName.Contains(search) select t.CoursetName;
+            foreach (var t in tt)
+            {
+                Console.WriteLine($"Cource Name  is {t}.");
 
-            // students.Print();
-            //cources1.Print();
+            }
+            Console.WriteLine("--------------------------------------------");
+            var ts = from t in students where t.FirstName.Contains(search) select t.LastName + " " + t.FirstName;
+            foreach (var t in tt)
+            {
+                Console.WriteLine($"Student Name  is {t}.");
 
-
-
-
-
-            /*
-            studentArray.Where(s => s.age > 12 && s.age < 20).ToArray(); // Use
-            LINQ to find first student whose name is Bill Student bill =
-            studentArray.Where(s => s.StudentName == "Bill").FirstOrDefault(); //
-            */
-
-            // students.Print();
-
+            }
+            Console.WriteLine("--------------------------------------------");
 
         }
     }
