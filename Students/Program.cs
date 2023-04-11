@@ -83,7 +83,8 @@ namespace Students
             {
 
                 var tLq = from t in teachers where t.Cources.Contains(c) select t.LastName + " " + t.FirstName;
-                foreach (var t in tLq) {
+                foreach (var t in tLq) 
+                {
                     Console.WriteLine($"Cource Name  is {c.CoursetName}.Teacher name is {t} Invited students:");
                     var stLq = from Studentsstudent in students where Studentsstudent.Cources.Contains(c) select Studentsstudent.LastName + " " + Studentsstudent.FirstName;
                     foreach (var s in stLq)
