@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework_4_1", "homework_4_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Students", "Students\Students.csproj", "{854CD63B-470F-49AF-B38D-7EDCF6EB3ABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{EAE41FB1-1186-4CB7-9580-1AB285281468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars", "Cars\Cars.csproj", "{EAE41FB1-1186-4CB7-9580-1AB285281468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

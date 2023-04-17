@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "homework3_1_2_add": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50195;http://localhost:50196"
+    }
+  }
+}
