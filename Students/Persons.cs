@@ -1,6 +1,6 @@
 ﻿namespace Students
 {
-    class Persons
+    class Persons 
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
