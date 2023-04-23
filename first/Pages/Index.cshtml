@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<a href="/AboutMe" class="btn btn-primary">Learn More About Me</a>
+@foreach (var Hobby in Model.MyHobbies)
+{
+        <div>
+        <a asp-page="/order" asp-route-id="@Hobby.Id" title="Order @Hobby.Name">
+                <div>
+                <h3>@Hobby.Name</h3>
+                <p>@Hobby.Description</p>
+                </div>
+            </a>        
+        </div>
+}
