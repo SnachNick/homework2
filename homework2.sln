@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars", "Cars\Cars.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork_delegate", "HomeWork_delegate\HomeWork_delegate.csproj", "{1C89F5B0-70DE-49CC-9236-795BDE436847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "first", "first\first.csproj", "{48E84EA3-796D-4965-9D7D-31939F931729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "first", "first\first.csproj", "{48E84EA3-796D-4965-9D7D-31939F931729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Second", "Second\Second.csproj", "{3A664E0B-8309-46C4-AF42-6CCA1FDC4E8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{48E84EA3-796D-4965-9D7D-31939F931729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48E84EA3-796D-4965-9D7D-31939F931729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48E84EA3-796D-4965-9D7D-31939F931729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A664E0B-8309-46C4-AF42-6CCA1FDC4E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A664E0B-8309-46C4-AF42-6CCA1FDC4E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A664E0B-8309-46C4-AF42-6CCA1FDC4E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A664E0B-8309-46C4-AF42-6CCA1FDC4E8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
