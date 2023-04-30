@@ -1,0 +1,28 @@
+﻿@model Second.Models.Friend
+<table class="table">
+
+        <form method="post">
+
+            <p>
+                <label>Id</label><br />
+                <input type="number" value=@Model.FriendID name="id" />
+            </p>
+            <p>
+                <label>Name</label><br />
+                <input type="text" value=@Model.FriendName name="name" />
+            </p>
+            <p>
+                <label>Place</label><br />
+                <input type="text" value=@Model.Place name="place" />
+            </p>
+            <p>
+                <input type="submit" value="Save" class="btn btn-primary pull-right" />
+            </p>
+        </form>
+
+</table>
+<h2>Friends</h2>
+
+<div>
+    @Html.ActionLink("Create new record", "AddRecord")
+</div>

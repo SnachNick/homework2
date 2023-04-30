@@ -1,0 +1,42 @@
+﻿
+@using Second.Models
+@model IEnumerable<Friend>
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Friends</h2>
+
+<div><b>My friends </b><br /></div>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <!-- th>Friend Id </th> -->
+        <th>First Name </th>
+        <th>Place </th>
+        <th>Actions </th>
+    </tr>
+        @foreach (Friend p in Model)
+        {
+            <tr>
+                <td hidden>@p.FriendID</td>
+                <td>@p.FriendName</td>
+                <td>@p.Place</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = p.FriendID })|
+                    @Html.ActionLink("Delete", "Delete", new { id = p.FriendID })
+                </td>
+            </tr>
+
+        }
+    </table>
+
+
+    <div>
+        @Html.ActionLink("Create new record", "AddRecord")
+    </div>
+
+
+
+

@@ -1,0 +1,41 @@
+﻿@using Second.Models
+@model IEnumerable<Friend>
+
+@{
+    ViewBag.Title = "AddRecord";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+<form method="post">
+    <p>
+        <label>Id</label><br />
+        <input type="number" name="friend.FriendID" />
+    </p>
+    <p>
+        <label>Name</label><br />
+        <input type="text" name="friend.FriendName" />
+    </p>
+    <p>
+        <label>Place</label><br />
+        <input type="text" name="friend.Place" />
+    </p>
+    <p>
+        <input type="submit" value="Create" class="btn btn-primary pull-left" />
+    </p>
+</form>
+
+    <table class="table">
+        <p>
+            <hr />
+        </p>
+        @foreach (Friend p in Model)
+        {
+            <tr><td>@p.FriendID</td><td>@p.FriendName</td><td>@p.Place</td></tr>
+        }
+    </table>
+
+
+<div>
+    @Html.ActionLink("Back to List", "View")
+</div>
