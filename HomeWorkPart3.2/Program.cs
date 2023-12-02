@@ -1,4 +1,6 @@
-﻿namespace Soring
+﻿using System.Diagnostics;
+
+namespace Soring
 {
     public class QiuckSort
     {
@@ -191,13 +193,37 @@
                 a[i] = random.Next(0, 100);
             }
 
-            Console.WriteLine("Inpun array: {0}", string.Join(" ", a));
 
-            Console.WriteLine("Tree Sort: {0}", string.Join(" ", TreeSort(a)));
+//            Console.WriteLine("Inpun array: {0}", string.Join(" ", a));
 
-            Console.WriteLine("Quick Sort: {0}", string.Join(" ", QuickSort(a)));
+            System.Diagnostics.Stopwatch myStopWatch = new System.Diagnostics.Stopwatch();
+            myStopWatch.Start();
+            
+            TreeSort(a);
 
-            Console.WriteLine("Shell Sort: {0}", string.Join(" ", ShellSort(a)));
+            myStopWatch.Stop();
+
+            Console.WriteLine("Tree Sort: "+ myStopWatch.Elapsed.Milliseconds.ToString());
+
+            myStopWatch.Restart();
+
+            myStopWatch.Start();
+
+            QuickSort(a);
+
+            myStopWatch.Stop();
+
+            Console.WriteLine("Quick Sort: " + myStopWatch.Elapsed.Milliseconds.ToString());
+
+            myStopWatch.Restart();
+
+            myStopWatch.Start();
+
+            ShellSort(a);
+
+            myStopWatch.Stop();
+
+            Console.WriteLine("Shell Sort: "+ myStopWatch.Elapsed.Milliseconds.ToString());
 
 
         }
